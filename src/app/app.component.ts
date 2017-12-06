@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     this.dragItem = null;
   }
   Drop(event, component: number) {
-    if (this.dragItem) {
+    if (this.dragItem !== null) {
       const dragIndex = this.findDragIndex(this.dragItem);
       const dropIndex = this.findDropIndex(component);
       if (dragIndex !== dropIndex) {
